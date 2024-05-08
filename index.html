@@ -3,9 +3,19 @@
         <title>TruthConnect</title>
     </head>
     <body>
+        <div class="events">
+            <div class="event">
+                <h1>Event Name</h1>
+                <h2>Event Time</h2>
+                <h3>Event Location</h3>
+                <button onclick="event_publish()">Join</button>
+            </div>
+        </div>
+
         <script type="module">
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+            import { getFirestore, collection, addDoc } from "firebase/firestore";
             // TODO: Add SDKs for Firebase products that you want to use
             // https://firebase.google.com/docs/web/setup#available-libraries
           
@@ -23,6 +33,23 @@
           
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
+
+            // Initialize Cloud Firestore and get a reference to the service
+            const db = getFirestore(app);
+        </script>
+        <script>
+            async function event_publish() {
+                try {
+                    const docRef = await addDoc(collection(db, "users"), {
+                        first: "Ada",
+                        last: "Lovelace",
+                        born: 1815
+                    });
+                    console.log("Document written with ID: ", docRef.id);
+                    } catch (e) {
+                        console.error("Error adding document: ", e);
+                    }
+            }
         </script>
     </body>
 </html>
