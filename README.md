@@ -7,6 +7,6 @@ an app where you can find christian events close to you!
 - [x] Navbar
 - [x] Event list
     - [ ] Add link to h2 of events
-- [ ] Event page
+- [x] Event page
 - [x] Add event form
-- [ ] Profile page
+- [x] Profile page
