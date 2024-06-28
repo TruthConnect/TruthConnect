@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthConnect - Home</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-event.html">Add event</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="top-bar">Profile</h1>
+    <div class="profile-container">
+        <img src="profile-picture.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-info">
+            <h2>John Doe</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="johndoe" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required>
+
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</textarea>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
