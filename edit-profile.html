@@ -22,18 +22,19 @@
         <img src="profile-picture.jpg" alt="Profile Picture" class="profile-pic">
         <div class="profile-info">
             <h2>John Doe</h2>
-            <div class="label-value">
-                <p>johndoe</p>
-            </div>
-            <div class="label-value">
-                <p>johndoe@example.com</p>
-            </div>
-            <div class="label-value">
-                <label>Bio:</label>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
-            </div>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="johndoe" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required>
+
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</textarea>
+
+                <button type="submit">Update Profile</button>
+            </form>
         </div>
-        <a href="edit-profile.html" class="button">Edit profile</a>
     </div>
 
 </body>

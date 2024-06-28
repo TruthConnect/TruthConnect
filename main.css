@@ -12,6 +12,8 @@
 
 body {
     margin: 0;
+    margin-top: 65px;
+    margin-bottom: 60px;
     padding: 0;
     background-color: var(--background-color);
 }
@@ -63,7 +65,7 @@ nav {
 }
 
 .event-list {
-    padding: 65px 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -119,4 +121,181 @@ nav {
         width: 100%;
         margin: 10px;
     }
+}
+
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    margin-top: 0;
+}
+
+.form-container label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+.form-container input,
+.form-container textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-family: var(--font-family);
+}
+
+.form-container button:hover {
+    background-color: var(--primary-color);
+}
+
+.event-detail {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.event-detail h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.event-detail p {
+    margin: 10px 0;
+    font-family: var(--font-family);
+}
+
+.event-detail .date, .event-detail .location {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.event-detail .description {
+    margin-top: 20px;
+}
+
+.event-detail .register-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.event-detail .register-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.profile-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--secondary-color);
+}
+
+.profile-info {
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+.profile-info h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.profile-info label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.profile-info input,
+.profile-info textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+.profile-info button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    width: 100%;
+    text-align: center;
+}
+.profile-info button:hover {
+    background-color: var(--secondary-color);
+}
+
+.profile-info {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-info h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.profile-info label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.profile-info .label-value {
+    margin-bottom: 20px;
 }
