@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 import axios from 'axios';
 
 export default function HomeScreen() {
     const [data, setData] = useState([]);
+    const [username, setUsername] = useState('');
+
+
 
     useEffect(() => {
-        axios.get('http://tc.kk1s.no:3000/data')
+        axios.get('http://tc.kk1s.no:3000/getLatestEvents')
             .then(response => {
                 setData(response.data);
             })
@@ -18,31 +20,32 @@ export default function HomeScreen() {
     }, []);
 
     return (
-        <ThemedView style={styles.container}>
-            <ThemedView style={styles.event}>
-                <ThemedText style={styles.title}>Fuel</ThemedText>
-                <ThemedText style={styles.date}>20:00 - 12 juli</ThemedText>
-                <ThemedText style={styles.location}>Misjonskirken</ThemedText>
-
-            </ThemedView>
+        <View style={styles.container}>
             <View style={styles.container}>
-                {data.map(item => (
-                    <Text key={item.ID}>{item.Name}</Text> // Adjust based on your table structure
-                ))}
+                <ThemedText style={styles.title}>Hey, {username}</ThemedText>
             </View>
-        </ThemedView>
+            <View style={styles.events}>
+                {data.map((item, key) => {
+                    return (
+                        <View style={styles.event} key={key}>
+                            <ThemedText>{item.Name}</ThemedText>
+                        </View>
+                    );
+                })}
+            </View>
+        </View>
     );
 }
 
-const text = '#1f0504';
-const background = '#fef7f7';
-const primary = '#e22c31';
-const secondary = '#7bed92';
-const accent = '#58e8dc';
-
 const styles = StyleSheet.create({
     event: {
-        backgroundColor: primary,
+        margin: 15,
+        backgroundColor: '#FF16A2',
+    },
+    events: {
+        backgroundColor: '#4F4F4F',
+        margin: 0,
+        marginTop: 10,
     },
     title: {
     },

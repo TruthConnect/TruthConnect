@@ -17,42 +17,15 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  // :root[data-theme="light"] {
-  //   --primary: #e22c32;
-  //   --background: #fef6f6;
-  //   --secondary: #7ded93;
-  //   --text: #200504;
-  //   --accent: #59e8dc;
-  // }
-  // :root[data-theme="dark"] {
-  //   --primary: #d31d23;
-  //   --background: #090101;
-  //   --secondary: #128228;
-  //   --text: #fbe0df;
-  //   --accent: #17a69a;
-  // }
-  
-  const LightTheme: Theme = {
-    dark: false,
-    colors: {
-      primary: '#e22c32',
-      background: '#fef6f6',
-      card: '#7ded93',
-      text: '#200504',
-      border: '#59e8dc',
-      notification: '#59e8dc',
-    },
-  };
-
   const DarkTheme: Theme = {
     dark: true,
     colors: {
-      primary: '#d31d23',
-      background: '#090101',
-      card: '#128228',
-      text: '#fbe0df',
-      border: '#17a69a',
-      notification: '#17a69a',
+      primary: '#009DFF',
+      background: '#262626',
+      card: '#FF16A2',
+      text: '#fff',
+      border: '#000',
+      notification: '#FF16A2',
     },
   };
 
@@ -69,7 +42,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : LightTheme}>
+    <ThemeProvider value={DarkTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
